@@ -1,0 +1,15 @@
+DharmajeetYadav
+
+API Key : uAW7MsmtFwqUyl1T3zyqZgMvA
+API Secrets: ijgGGjWUmR5y48tXJMYsw01MC0K5oEz5pEmkdr6El1XAhWCUWF
+
+
+https://developer.x.com/en/docs/x-api/v1/tweets/search/api-reference/get-search-tweets
+
+API_KEY='uAW7MsmtFwqUyl1T3zyqZgMvA'
+API_SECRET_KEY='ijgGGjWUmR5y48tXJMYsw01MC0K5oEz5pEmkdr6El1XAhWCUWF'
+curl -u "$API_KEY:$API_SECRET_KEY" --data 'grant_type=client_credentials' 'https://api.x.com/oauth2/token'
+BEARER_TOKEN='AAAAAAAAAAAAAAAAAAAAAGBv3AEAAAAAuEJ4Ab1LHYYh9U39dJ%2F4H1MYUw8%3DMAMZovMiELF4POcj1aj8NdFKsstMWiGCVzEVwn26Zr72oXqSU3'
+
+BEARER_TOKEN="AAAAAAAAAAAAAAAAAAAAAGBv3AEAAAAAuEJ4Ab1LHYYh9U39dJ%2F4H1MYUw8%3DMAMZovMiELF4POcj1aj8NdFKsstMWiGCVzEVwn26Zr72oXqSU3"
+curl --request GET 'https://api.x.com/2/tweets/search/recent?query=from:twitterdev' --header 'Authorization: Bearer $BEARER_TOKEN'
